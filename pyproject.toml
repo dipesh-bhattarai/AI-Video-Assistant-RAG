@@ -1,0 +1,44 @@
+[project]
+name = "ai-video-assistant-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "dipesh-bhattarai", email = "dipesh.bhattarai.dipu@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=0.5.0",
+    "deep-translator>=1.11.4",
+    "ffmpeg-python>=0.2.0",
+    "fpdf2>=2.7.9",
+    "groq>=0.2.0",
+    "huggingface-hub>=0.23.0",
+    "langchain>=0.2.0",
+    "langchain-community>=0.2.0",
+    "langchain-core>=0.2.0",
+    "langchain-groq>=0.1.0",
+    "langchain-huggingface>=0.0.3",
+    "numpy>=1.26.0",
+    "openai-whisper>=20231117",
+    "pydub>=0.25.1",
+    "python-dotenv>=1.0.0",
+    "reportlab>=4.2.0",
+    "requests>=2.32.0",
+    "sentence-transformers>=3.0.0",
+    "streamlit>=1.35.0",
+    "streamlit-extras>=0.4.0",
+    "tiktoken>=0.7.0",
+    "torch>=2.2.0",
+    "torchaudio>=2.2.0",
+    "tqdm>=4.66.0",
+    "watchdog>=4.0.0",
+    "yt-dlp>=2024.4.9",
+]
+
+[project.scripts]
+ai-video-assistant-rag = "ai_video_assistant_rag:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"

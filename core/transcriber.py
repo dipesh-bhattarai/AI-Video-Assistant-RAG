@@ -1,7 +1,7 @@
 import whisper
 import os
 
-WHISPER_MODEL = os.getenv("WHISPER_MODEL","small")
+WHISPER_MODEL = os.getenv("WHISPER_MODEL","base")
 
 _model = None
 def load_model():
@@ -24,7 +24,7 @@ def transcribe_all(chunks : list , translate : bool = False) -> str:
     full_transcript = ""
     for i, chunk in enumerate(chunks):
         print(f"Transcribing chunk {i+1}")
-        text = transcribe_chunk(chunk , translate= translate)
+        text = transcribe_chunk(chunk , translate = translate)
 
         full_transcript += text + " "
     print("Transcription completed")

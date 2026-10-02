@@ -8,7 +8,7 @@ print("KEY LOADED:", os.getenv("SARVAM_API_KEY"))  # should print your key
 
 print("CWD:", os.getcwd())
 
-source = "https://www.youtube.com/watch?v=tplWXd_T7YQ"
+source = "https://youtu.be/KGynZJ8ai6M?si=HfPaaIeXk9BiXu0P"
 language = "hinglish"  # change to "hinglish" to test Sarvam
 
 chunks = process_input (source)

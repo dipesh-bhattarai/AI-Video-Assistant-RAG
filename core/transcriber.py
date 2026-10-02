@@ -13,3 +13,20 @@ def load_model():
         print("Whiaper model loaded successfully")
 
     return _model
+
+def transcribe_chunk(chunk_path : str, translate : bool = False) -> str:
+    model = load_model()
+    task = "translate" if translate else "transcribe"
+    result = model.transcribe(chunk_path, task = task)
+    return result['text']
+
+def transcribe_all(chunks : list , translate : bool = False) -> str:
+    full_transcript = ""
+    for i, chunk in enumerate(chunks):
+        print(f"Transcribing chunk {i+1}")
+        text = transcribe_chunk(chunk , translate= translate)
+
+        full_transcript += text + " "
+    print("Transcription completed")
+
+    return full_transcript

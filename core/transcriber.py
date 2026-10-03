@@ -98,25 +98,30 @@ def transcribe_chunk(chunk_path: str, language: str = "english") -> str:
     - english  → Whisper (local model)
     - hinglish → Sarvam (translates to English while transcribing)
     """
-    if language.lower() == "hinglish":
+    if language.lower() == {"hinglish","nepangrezi"}:
         return transcribe_chunk_sarvam(chunk_path)
     return transcribe_chunk_whisper(chunk_path)
 
 
 def transcribe_all(chunks: list, language: str = "english") -> str:
 
-    full_transcript = "" 
+    full_transcript = ""
 
-    engine = "Sarvam AI" if language.lower() == "hinglish" else "Whisper"
+    engine = (
+        "Sarvam AI"
+        if language.lower() in {"hinglish", "nepangrezi"}
+        else "Whisper"
+    )
+
     print(f"Using {engine} for transcription.")
 
-    for i, chunk in enumerate(chunks):  
+    for i, chunk in enumerate(chunks):
 
         print(f"Transcribing chunk {i + 1}/{len(chunks)}...")
 
-        text = transcribe_chunk(chunk, language=language)  
+        text = transcribe_chunk(chunk, language=language)
 
-        full_transcript += text + " "  
+        full_transcript += text + " "
 
     print("Transcription complete.")
 

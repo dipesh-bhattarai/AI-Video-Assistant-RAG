@@ -143,7 +143,7 @@ if result is None:
             type=["mp3", "wav", "m4a", "mp4", "mov", "mkv", "webm"],
         )
 
-    language = st.selectbox("Spoken language", ["english", "hinglish"], format_func=str.capitalize)
+    language = st.selectbox("Spoken language", ["english", "hinglish", "nepangrezi"], format_func=str.capitalize)
 
     if st.button("Analyze recording"):
         if mode == "YouTube link" and not (source or "").strip():

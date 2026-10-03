@@ -2,6 +2,9 @@ import os
 import tempfile
 
 import streamlit as st
+import importlib.util
+
+st.write("langchain_chroma:", importlib.util.find_spec("langchain_chroma"))
 
 from main import run_pipeline
 from core.rag_engine import ask_question

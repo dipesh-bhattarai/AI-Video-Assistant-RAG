@@ -30,14 +30,14 @@ def run_pipeline(source: str, language : str = "english")->dict:
     rag_chain = build_rag_chain(transcript)
 
     return {
-        "Title":title,
-        "Transcript":transcript,
-        "Summary":summary,
-        "Action Items":action_item,
-        "Key Decisions":decisions,
-        "Open Questions":questions,
-        "Rag Chain": rag_chain
-    } 
+    "title": title,
+    "transcript": transcript,
+    "summary": summary,
+    "action_items": action_item,
+    "key_decisions": decisions,
+    "open_questions": questions,
+    "rag_chain": rag_chain
+}
 
 if __name__ == "__main__":
     # CLI entry point

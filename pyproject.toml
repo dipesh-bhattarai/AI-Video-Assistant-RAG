@@ -35,6 +35,7 @@ dependencies = [
     "tqdm>=4.66.0",
     "watchdog>=4.0.0",
     "yt-dlp>=2024.4.9",
+    "torchvision>=0.29.1",
 ]
 
 [project.scripts]

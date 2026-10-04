@@ -1,3 +1,8 @@
+import shutil
+import streamlit as st
+
+st.write("Deno path:", shutil.which("deno"))
+
 import os
 import tempfile
 
